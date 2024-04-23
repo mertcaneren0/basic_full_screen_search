@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Search Box</title>
+
+    <link rel="stylesheet" href="st.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+
+    <div class="container p-y-md">
+        <div class="control">
+            <div class="btn-material"></div>
+            <i class="material-icons icon-material-search">search</i>
+        </div>
+    </div>
+
+    <i class="material-icons icon-close">close</i>
+    <h1> Arama şeysine hoşgeldiniz
+    </h1>
+    <div class="search-input">
+        <input type="text" class="input-search" placeholder="Hemen Aramaya Başla...">
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <script>
+        $('.control').click(function() {
+            $('body').addClass('search-active');
+            $('.input-search').focus();
+        });
+
+        $('.icon-close').click(function() {
+            $('body').removeClass('search-active');
+        });
+    </script>
+
+</body>
+
+</html>
